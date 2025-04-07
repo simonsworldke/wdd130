@@ -1,0 +1,68 @@
+To complete this assignment, follow the steps below and create a Word document that includes all the necessary components. Here's a breakdown of the tasks and what to include in your document:
+
+### 1. **Logo**
+   - **Choose or design a logo**: Select a logo for your rafting website. You can choose from the provided logos or create your own.
+   - **Insert the logo image** into your Word document: Add the image of your chosen logo into the Word document.
+   
+   Example: If you select a logo, you can insert it by going to the **Insert** tab in Word and choosing **Pictures** to upload the logo file.
+
+### 2. **Color Palette**
+   - **Choose a color palette**: Use [Coolors.co](https://coolors.co) to generate a color palette that fits the theme of your rafting site. You can choose 3–4 colors that complement each other and the overall theme.
+   
+   After selecting your palette, note down the **hex codes** for the colors. The hex code is a six-digit number starting with `#`, e.g., `#ff5733`.
+   
+   **Record the following color labels with their hex codes**:
+   - **primary-color** ____________
+   - **secondary-color** _____________
+   - **accent1-color** _____________
+   - **accent2-color** _____________
+
+   Example color codes:
+   - **primary-color** #1a73e8
+   - **secondary-color** #34a853
+   - **accent1-color** #fbbc05
+   - **accent2-color** #ea4335
+
+   **Provide the link to your Coolors palette**:
+   - In Coolors, you’ll see a URL in the address bar that links directly to your created palette. Copy that URL and paste it into the document.
+   - Example: `https://coolors.co/f2d7ee-d3bcc0-a5668b-69306d-0e103d`
+
+### 3. **Typography**
+   - **Choose two fonts from Google Fonts** for your website:
+     - One for the **headings** (e.g., something bold and impactful).
+     - One for the **body text** (e.g., something readable and clean).
+
+   You can use [Google Fonts](https://fonts.google.com/) to browse and select your fonts. After selecting, note down the names of the fonts.
+
+   Example:
+   - **heading-font**: `Roboto Slab`
+   - **text-font**: `Open Sans`
+
+### 4. **Final Document Layout**  
+   Your Word document should be structured like this:
+
+   1. **Logo**: Insert the image file of your logo.
+   
+   2. **Color Palette**:
+      - **primary-color** #1a73e8
+      - **secondary-color** #34a853
+      - **accent1-color** #fbbc05
+      - **accent2-color** #ea4335
+   
+   3. **Typography**:
+      - **heading-font**: `Roboto Slab`
+      - **text-font**: `Open Sans`
+   
+   4. **Coolors.co link**: Paste the link to your palette from Coolors.co.
+   
+   Example:
+   ```
+   Coolors Palette Link:
+   https://coolors.co/f2d7ee-d3bcc0-a5668b-69306d-0e103d
+   ```
+
+### 5. **Submission**
+   - Once you've completed the document, save it as a `.docx` file.
+   - **Submit** this file as instructed by your course or instructor.
+
+By following these steps, you will have all the necessary components for the site plan and be ready to submit your work. Let me know if you need further assistance!

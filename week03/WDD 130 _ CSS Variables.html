@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://byui-cse.github.io/wdd130-ww-course/week03/prepare-css-variables.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | CSS Variables</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 130 _ CSS Variables_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Variables_files/course.css">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Variables_files/vs2015.min.css">
+  <script src="./WDD 130 _ CSS Variables_files/692a19d31f48cd0e_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 130<span id="coursetitle">: Web Fundamentals</span></h1>
+      <img src="./WDD 130 _ CSS Variables_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd130-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W03 Learning Activities: CSS Variables</h2>
+    <h3>Overview</h3>
+    <p>CSS variables are a powerful tool for managing a website's design. They allow for the creation of reusable values
+      that can be used throughout a stylesheet, helping to maintain design congruency. This activity will introduce you
+      to CSS variables and how to use them in your projects.</p>
+
+    <div class="callout info">
+      <p>"Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For
+        example, it's common to see the same color used in hundreds of different places in stylesheets. Changing a color
+        that's been duplicated in many places requires a search and replace across all rules and CSS files. Custom
+        properties allow a value to be defined in one place, then referenced in multiple other places so that it's
+        easier to work with." – MDN</p>
+    </div>
+
+    <h3>Prepare</h3>
+    <p>How are CSS variables used in website projects?</p>
+
+    <h4>The :root Pseudo-Class</h4>
+    <ul>
+      <li>The <code>:root</code> pseudo-class is used to select the root element (<code>html</code>) of the document.
+      </li>
+      <li>It is common to see the <code>:root</code> rule at the top of the CSS document, especially since global CSS
+        variables will be declared within that rule.</li>
+    </ul>
+
+    <h4>Writing Global CSS Variables</h4>
+    <ul>
+      <li>Global CSS variables are declared within the <code>:root</code> selector.</li>
+      <li>Global CSS variables are declared using the <code>--</code> prefix followed by the variable name, of your
+        choice and be sure to follow acceptable naming conventions.
+        <div class="callout info">
+          <p>Using <strong>Kebab</strong> (dash-separated) notation with hyphens (-) is OK when naming CSS
+            variables.<br>
+            Example: <code>primary-color</code>
+          </p>
+        </div>
+      </li>
+      <li>Global CSS variables are used by calling the variable name with the <code>var()</code> function.</li>
+    </ul>
+    <pre><code class="css hljs language-css"><span class="hljs-selector-pseudo">:root</span> {
+  <span class="hljs-attr">--heading-background-color</span>: <span class="hljs-number">#f06</span>;
+  <span class="hljs-attr">--heading-text-color</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attr">--heading-font</span>: <span class="hljs-string">'Montserrat'</span>, Helvetica, sans-serif;
+  <span class="hljs-attr">--padding</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attr">--border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> / <span class="hljs-number">0.1</span>);
+}
+
+<span class="hljs-comment">/* Some example variable use in the declarations. */</span>
+
+<span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--heading-background-color);
+  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--heading-text-color);
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-built_in">var</span>(--heading-font);
+  <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">var</span>(--padding);
+}
+
+<span class="hljs-selector-tag">aside</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span> auto;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">var</span>(--padding);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> / <span class="hljs-number">0.1</span>);
+}</code></pre>
+
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>In your main <strong>wdd130</strong> site, open up your existing <strong>styles.css</strong> file.</li>
+      <li>Create a <code>:root {}</code> rule at the top of the file.</li>
+      <li>Review your course home page CSS a look for colors, fonts, sizes, and other values that are <em>repeated</em>.
+      </li>
+      <li>Replace those repeated CSS property values with CSS variables.</li>
+      <li>Test your page in your local browser using Live/Five Server.</li>
+      <li>Commit and sync/push your work to your wdd130 GitHub Pages enabled repository.</li>
+      <li>Share your work with others on Microsoft Teams.</li>
+    </ol>
+
+    <div class="callout reference">
+      <h4>Optional Resources</h4>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root" target="_blank">:root</a> – MDN</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/var()" target="_blank">var()</a> – MDN</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Variables" target="_blank">CSS Variables</a> -
+          MDN</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">Using
+            CSS custom properties (variables)</a> – MDN</li>
+      </ul>
+    </div>
+
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 130 _ CSS Variables_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="./WDD 130 _ CSS Variables_files/prevent-code-select.js.download"></script>
+
+
+</body></html>

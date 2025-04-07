@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0414)https://ce4c9a00a6162b3739f56f71cd304443ac1e55ff.mdnplay.dev/en-US/docs/Web/HTML/Element/search/runner.html?state=RVDLTsMwEPyV1ZwLq14jJzcQB3pqKy6%2BOMlWMYrt1nZACPHvKHGb3Faax87ML7qUUAE7DNmNqKAGMb3ERnsiNeybQ%2FiyQt%2FSJptF8bAvSBITu2G5idQlREemyzb4WuOZC8oadwKRGk0rI11CrDXc7KnRvFrfk6HlheKFsQmsv06Z8s9Vao1iqEG23%2FTkjZvBmwbxJmynnINflVPrbNZojouF4gI%2FkvMcvVTitZPidQTs8HkfKMUOFVj80%2FnIfegSf0jLb6fDO7%2BM4sTnR2%2F8%2FQM%3D -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+              /* Legacy css to support existing live samples */
+              body {
+                padding: 0;
+                margin: 0;
+              }
+
+              svg:not(:root) {
+                display: block;
+              }
+
+              .playable-code {
+                background-color: #f4f7f8;
+                border: none;
+                border-left: 6px solid #558abb;
+                border-width: medium medium medium 6px;
+                color: #4d4e53;
+                height: 100px;
+                width: 90%;
+                padding: 10px 10px 0;
+              }
+
+              .playable-canvas {
+                border: 1px solid #4d4e53;
+                border-radius: 2px;
+              }
+
+              .playable-buttons {
+                text-align: right;
+                width: 90%;
+                padding: 5px 10px 5px 26px;
+              }
+            </style>
+        
+        
+        <style id="css-output">
+          
+        </style>
+        <script>
+          const consoleProxy = new Proxy(console, {
+            get(target, prop) {
+              if (typeof target[prop] === "function") {
+                return (...args) => {
+                  try {
+                    window.parent.postMessage(
+                      { typ: "console", prop, args },
+                      "*"
+                    );
+                  } catch {
+                    try {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop,
+                          args: args.map((x) => {
+                            try {
+                              window.structuredClone(x);
+                              return x;
+                            } catch {
+                              return { _MDNPlaySerializedObject: x.toString() };
+                            }
+                          }),
+                        },
+                        "*"
+                      );
+                    } catch {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop: "warn",
+                          args: [
+                            "[Playground] Unsupported console message (see browser console)",
+                          ],
+                        },
+                        "*"
+                      );
+                    }
+                  }
+                  target[prop](...args);
+                };
+              }
+              return target[prop];
+            },
+          });
+
+          window.console = consoleProxy;
+          window.addEventListener("error", (e) => console.log(e.error));
+        </script>
+        
+        
+      </head>
+      <body>
+        <header>
+  <h1>Movie website</h1>
+  <search>
+    <form action="https://ce4c9a00a6162b3739f56f71cd304443ac1e55ff.mdnplay.dev/en-US/docs/Web/HTML/Element/search/search/">
+      <label for="movie">Find a Movie</label>
+      <input type="search" id="movie" name="q">
+      <button type="submit">Search</button>
+    </form>
+  </search>
+</header>
+
+        <script type="">
+          ;
+        </script>
+        <script>
+          try {
+            window.parent.postMessage({ typ: "ready" }, "*");
+          } catch (e) {
+            console.error("[Playground] Failed to post ready message", e);
+          }
+        </script>
+      
+    
+  </body></html>

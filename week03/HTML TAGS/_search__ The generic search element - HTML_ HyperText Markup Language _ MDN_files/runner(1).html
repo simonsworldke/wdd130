@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0474)https://23e894822abf220a5fdc287d79493276cde3cc7e.mdnplay.dev/en-US/docs/Web/HTML/Element/search/runner.html?state=dZE%2FT8QwDMW%2FivF8UYbbqt5thxhg4Y9YurSpUQqpcySOdBXiu6M2KdVJsDl%2B8e%2Fp2V9oYsQKcYdWRocV1pHaYOyxYYDatR25pQS4HbiHlnt4G5xQgMmnAJ%2BJwpT1euBzEpDpTIcGM6VBGPpDg%2Fkbgs5YvXGvLK4RxpL56PxlhdClNaI8u40EcJqbMLZiLEVYxCuH5RXJyOB5dbH74yPF5CRWtbb7tZ1c9glZa7AIAPWNUpATQVbBeBZiAaXWcZ1%2BY%2Fgkc46Fxl79A2RfYPEvWmaUfW0B5rrcB3f4Xm4Xg8EKNbF6edK9N1G%2FUqfvnh%2Fu9cnRSCxlTOP3Dw%3D%3D -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+              /* Legacy css to support existing live samples */
+              body {
+                padding: 0;
+                margin: 0;
+              }
+
+              svg:not(:root) {
+                display: block;
+              }
+
+              .playable-code {
+                background-color: #f4f7f8;
+                border: none;
+                border-left: 6px solid #558abb;
+                border-width: medium medium medium 6px;
+                color: #4d4e53;
+                height: 100px;
+                width: 90%;
+                padding: 10px 10px 0;
+              }
+
+              .playable-canvas {
+                border: 1px solid #4d4e53;
+                border-radius: 2px;
+              }
+
+              .playable-buttons {
+                text-align: right;
+                width: 90%;
+                padding: 5px 10px 5px 26px;
+              }
+            </style>
+        
+        
+        <style id="css-output">
+          
+        </style>
+        <script>
+          const consoleProxy = new Proxy(console, {
+            get(target, prop) {
+              if (typeof target[prop] === "function") {
+                return (...args) => {
+                  try {
+                    window.parent.postMessage(
+                      { typ: "console", prop, args },
+                      "*"
+                    );
+                  } catch {
+                    try {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop,
+                          args: args.map((x) => {
+                            try {
+                              window.structuredClone(x);
+                              return x;
+                            } catch {
+                              return { _MDNPlaySerializedObject: x.toString() };
+                            }
+                          }),
+                        },
+                        "*"
+                      );
+                    } catch {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop: "warn",
+                          args: [
+                            "[Playground] Unsupported console message (see browser console)",
+                          ],
+                        },
+                        "*"
+                      );
+                    }
+                  }
+                  target[prop](...args);
+                };
+              }
+              return target[prop];
+            },
+          });
+
+          window.console = consoleProxy;
+          window.addEventListener("error", (e) => console.log(e.error));
+        </script>
+        
+        
+      </head>
+      <body>
+        <search>
+  <label>
+    Find and filter your query
+    <input type="search" id="query">
+  </label>
+  <label>
+    <input type="checkbox" id="exact-only">
+    Exact matches only
+  </label>
+
+  <section>
+    <h3>Results:</h3>
+    <ul id="results">
+      <!-- search result content -->
+    </ul>
+    <output id="no-results">
+      <!-- no results content -->
+    </output>
+  </section>
+</search>
+
+        <script type="">
+          ;
+        </script>
+        <script>
+          try {
+            window.parent.postMessage({ typ: "ready" }, "*");
+          } catch (e) {
+            console.error("[Playground] Failed to post ready message", e);
+          }
+        </script>
+      
+    
+  </body></html>

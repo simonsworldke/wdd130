@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://byui-cse.github.io/wdd130-ww-course/week03/prepare-css-position.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | CSS Layout: Position</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 130 _ CSS Layout_ Position_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Layout_ Position_files/course.css">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Layout_ Position_files/vs2015.min.css">
+  <script src="./WDD 130 _ CSS Layout_ Position_files/692a19d31f48cd0e_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 130<span id="coursetitle">: Web Fundamentals</span></h1>
+      <img src="./WDD 130 _ CSS Layout_ Position_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd130-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W03 Learning Activities: CSS Layout – Position</h2>
+    <h3>Overview</h3>
+    <p>Elements are positioned on a document using the <strong>normal flow</strong> by default. Sometimes, the layout
+      calls for placing items by absolute or fixed positions. Because this can lead to unintended outcomes, using
+      absolute or fixed positions should be done sparingly and only for specific areas and not the entire document.</p>
+
+    <div class="callout info">
+      <p>"The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left
+        properties determine the final location of positioned elements." – MDN
+      </p>
+    </div>
+
+    <p>Here is an example of using the <strong>position</strong> property and having text, "New Here?" and "Learn What
+      We Believe" overlaying an image in the same HTML container:
+    </p><figure>
+      <img src="./WDD 130 _ CSS Layout_ Position_files/church-ex-textoverlay.png" alt="Screenshot Example of Text Overlaying an Image in the Same Container" loading="lazy" width="449" height="241">
+      <figcaption>Example of text overlaying an image in the same container</figcaption>
+    </figure>
+    <p></p>
+
+
+
+    <h3>Prepare</h3>
+    <ul>
+      <li>Read the <code>absolute</code> and <code>fixed</code> sections under the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Values" target="_blank">Values</a> section of
+        the CSS position in the MDN documentation.
+      </li>
+    </ul>
+    <h4>Images and position/sizing</h4>
+    <p>Working with images can be challenging because they have a set width and height that must be otherwise the image
+      will appear pixelated and/or distorted. Normally, a general rule of thumb is to set only the width or the height,
+      not both in CSS in order to maintain the image's aspect ratio. If the image containers are set, then setting the
+      width to 100% is a common practice to ensure the image fills the container.</p>
+    <div class="callout info">
+      <p>It is recommended that you start with the following CSS declaration for all of your work in this class to help
+        control the aspect ratio of images.</p>
+      <pre><code class="css hljs language-css"><span class="hljs-selector-tag">img</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: auto;
+}</code></pre>
+      <p>The CSS above sets <strong>all</strong> image widths in the document to 100% of the <code>width</code> of their
+        containers and the <code>height</code> to auto, thus maintaining the image's intrinsic aspect ratio.</p>
+    </div>
+
+    The <strong>aspect ratio</strong>, which is the width by height measurement, is often shown as <strong>2:1</strong>
+    where the width is twice the height.
+    <div class="callout info">
+      In the example image from the Church's website above, the intrinsic dimensions of the image may not fit the actual
+      container dimensions by just using an auto height. In a case like this, the object-fit property can be used to set
+      the image to fill the container. Here is an example of the CSS rule:
+      <pre><code class="css hljs language-css"><span class="hljs-selector-tag">img</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">object-fit</span>: cover;
+}</code></pre>
+    </div>
+
+    <h3>Activity Instructions</h3>
+    <h4 class="step">File Setup</h4>
+    <ol>
+      <li>Create a folder named "<strong>week03</strong>" in your wdd130 directory.</li>
+      <li>Create a folder named "<strong>styles</strong>" within the <strong>week03</strong> folder.</li>
+      <li>Create a file named "<strong>overlay.html</strong>" in the <strong>week03</strong> folder.</li>
+      <li>Add a CSS file named "<strong>overlay.css</strong>"" in the <strong>week03/styles</strong> folder.</li>
+    </ol>
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>Give the <strong>overlay.html</strong> document a basic and valid HTML structure.</li>
+      <li>Be sure to <code>link</code> the CSS file in your HTML document <code>head</code>.</li>
+      <li>Copy the HTML from this CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/poMqQJw" target="_blank">CSS
+          position: absolute – overlay</a> and paste it into the <strong>overlay.html</strong> document's
+        <code>body</code>.
+      </li>
+    </ol>
+    <h4 class="step">CSS</h4>
+    <ol>
+      <li>Copy the CSS from the same CodePen into <strong>overlay.css</strong> file.</li>
+      <li>Move the <code>section class="stats"</code> display box from the upper right to the lower
+        left of the image.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="css hljs language-css">  ...
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">25px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">15px</span>;
+  ...</code></pre>
+        </details>
+      </li>
+      <li>Remove the <code>position: relative;</code> property from the container <code>div</code> (this div has a class
+        of <code>herodiv</code> assigned to
+        it).<br>What happens?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>The information <code>section</code> overlay moves to the bottom left of the document instead of the bottom
+            left of the <code>div.herodiv</code> container. This happens because, with the position property, the
+            absolute positioned item is positioned relative to its ancestors that have a declared, position property.
+            Since none have that property now, it moves to the overall document position instead of the
+            <code>&lt;div class="herodiv"&gt;</code> container.
+          </p>
+        </details>
+      </li>
+      <li>Also note the footer using a <code>position: fixed</code> declaration.</li>
+    </ol>
+    <h3>Submission</h3>
+    <ol>
+
+      <li>Test your page in your local browser using Live/Five Server.</li>
+      <li>Commit and push your work to your wdd130 GitHub Pages enabled repository.
+        <pre><code class="cli hljs language-bash">https://githubusername.github.io/wdd130/week03/overlay.html</code></pre>
+      </li>
+      <li>Share and discuss your work with your peers on Microsoft Teams.</li>
+    </ol>
+
+    <div class="callout reference">
+      <h4>Optional Resources</h4>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow" target="_blank">Normal
+            Flow</a> – MDN</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">CSS Position</a> –
+          MDN
+        </li>
+      </ul>
+    </div>
+
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 130 _ CSS Layout_ Position_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="./WDD 130 _ CSS Layout_ Position_files/prevent-code-select.js.download"></script>
+
+
+</body></html>

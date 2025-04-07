@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(1260)https://954a4efacadb8736249ce178bec20347690f7e88.mdnplay.dev/en-US/docs/Web/HTML/Global_attributes/anchor/runner.html?state=fVRLjhxFEL1KqNBIRuqu7gEsUE17VpYAyTZIDGZTEorKjO4KJj81GZE9bVtzBTbsOAnn4QJcAWVlz7gH2yxqUVEZ7714L7LeNUak6Zoh2jfwrg8At2x17ODp%2BuyivHpMOw4drAGzxos%2B3PWhDy0GM8ZUO7Yx6FL4LXVw3n6TyM%2BNJrqYOrgdWWkuKB10KSPaeNvB%2BXR4eAaH5no%2BMqC53qWYg10e20dxT774ag3n6%2FUZfP307POLE41b1qWJQSlobY%2FJUlomtJylg%2FP1dDipV1KJju0J5YTWcth18OV8uE7HYRuHeKjjHZVYTNeDy%2FQJofg2J%2FoE22fW2sdk%2F5H2oeRTT6ujH1E2RWHlGIoTB6oUjrbaQY3nSeLdqNUydLwLSyG3vf%2B6NBSU0knKy9p8FHHXh2bRjOpd0zWb6bKcexETeeBJsgdbBgdhBfSkCzAxCBklzQnQ8sRiOOyAHOsChCzYCMRZfLSg5KeYCiIHw5ZtDgpZweEQEwFpRSfwuAtYxN9kbOF5Zgg5GPCoygIU2Jc2JeeyFDhy5Clo9iC44%2FnQnhULZNuHzaqM0YeN5T0YhyLP%2Bqa60TfA9lnf0AH95Gh5X738%2B88%2F%2Fvnr983K8v7D3mMcfXP09GMARdZmurwaWYAFMEDpSh5LdDDEQ1tlnVBUs1%2BxMNzkMqcj3lKwcJPRn5pbZ5tS5PB%2B4MDiII0xmCwtfB8Ak8nzJuckWYAyzyHM0HveU0oIgYcRTEKBKbs9B0wtvM5uyopKxeNpxESa8CHx41YVSafWVu0v0ZFktFjz2pODxIXcRO%2BjjQ%2B8HslQQAE0JnvBAA5n3a%2FJzbtT0MSQo8Ryk8tG5MQCEzlX9neu3Ut%2BXB1xYMWg4GMaeP4FJRblm0wt%2FBiTIrh5n310riRTh5mHjUmVNaYWrnKaWO694wAjmoJV0UUIJodKCJaNZi86%2BzpzPH90Q%2F7vgrQF8YcUMBE4MprlfRuJFgpDCbWFV9m544WgE53VNXC59M7JHO18iKZZNL%2BVP32zaCSZpmtWFJY%2F%2F7Sy0cjqFxpW3129fLH61sUB3a%2BomnjISrKqe7xq7v4F -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+              /* Legacy css to support existing live samples */
+              body {
+                padding: 0;
+                margin: 0;
+              }
+
+              svg:not(:root) {
+                display: block;
+              }
+
+              .playable-code {
+                background-color: #f4f7f8;
+                border: none;
+                border-left: 6px solid #558abb;
+                border-width: medium medium medium 6px;
+                color: #4d4e53;
+                height: 100px;
+                width: 90%;
+                padding: 10px 10px 0;
+              }
+
+              .playable-canvas {
+                border: 1px solid #4d4e53;
+                border-radius: 2px;
+              }
+
+              .playable-buttons {
+                text-align: right;
+                width: 90%;
+                padding: 5px 10px 5px 26px;
+              }
+            </style>
+        
+        
+        <style id="css-output">
+          body {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.anchor {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: hsl(240 100% 75%);
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.infobox {
+  color: darkblue;
+  background-color: azure;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.infobox {
+  position: fixed;
+  left: anchor(right);
+  align-self: anchor-center;
+  margin-left: 10px;
+}
+
+        </style>
+        <script>
+          const consoleProxy = new Proxy(console, {
+            get(target, prop) {
+              if (typeof target[prop] === "function") {
+                return (...args) => {
+                  try {
+                    window.parent.postMessage(
+                      { typ: "console", prop, args },
+                      "*"
+                    );
+                  } catch {
+                    try {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop,
+                          args: args.map((x) => {
+                            try {
+                              window.structuredClone(x);
+                              return x;
+                            } catch {
+                              return { _MDNPlaySerializedObject: x.toString() };
+                            }
+                          }),
+                        },
+                        "*"
+                      );
+                    } catch {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop: "warn",
+                          args: [
+                            "[Playground] Unsupported console message (see browser console)",
+                          ],
+                        },
+                        "*"
+                      );
+                    }
+                  }
+                  target[prop](...args);
+                };
+              }
+              return target[prop];
+            },
+          });
+
+          window.console = consoleProxy;
+          window.addEventListener("error", (e) => console.log(e.error));
+        </script>
+        
+        
+      </head>
+      <body>
+        <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus
+  elementum sagittis vitae et.
+</p>
+
+<div class="anchor" id="example-anchor">⚓︎</div>
+
+<div class="infobox" anchor="example-anchor">
+  <p>This is an information box.</p>
+</div>
+
+<p>
+  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
+  cursus euismod quis viverra nibh cras pulvinar. Vulputate ut pharetra sit amet
+  aliquam.
+</p>
+
+<p>
+  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
+  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
+  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
+  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
+  accumsan.
+</p>
+
+        <script type="">
+          ;
+        </script>
+        <script>
+          try {
+            window.parent.postMessage({ typ: "ready" }, "*");
+          } catch (e) {
+            console.error("[Playground] Failed to post ready message", e);
+          }
+        </script>
+      
+    
+  </body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0253)https://42b0d7c57d7ac6c057896da782dab57b8834aa59.mdnplay.dev/en-US/docs/Web/HTML/Element/ins/runner.html?state=LcsxCoNAEAXQqyy%2FNky%2FSDrBIqmi2NjE9cNu0BGcKQKSuwfB%2Fr0DyQwRqJB9XRBRF7V7l4sF59dDfluYSA1FjbtzruUEo6LC55q2J0QI9da%2FZN6SycBJ2u75kGbhSvXzCH5%2F -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+              /* Legacy css to support existing live samples */
+              body {
+                padding: 0;
+                margin: 0;
+              }
+
+              svg:not(:root) {
+                display: block;
+              }
+
+              .playable-code {
+                background-color: #f4f7f8;
+                border: none;
+                border-left: 6px solid #558abb;
+                border-width: medium medium medium 6px;
+                color: #4d4e53;
+                height: 100px;
+                width: 90%;
+                padding: 10px 10px 0;
+              }
+
+              .playable-canvas {
+                border: 1px solid #4d4e53;
+                border-radius: 2px;
+              }
+
+              .playable-buttons {
+                text-align: right;
+                width: 90%;
+                padding: 5px 10px 5px 26px;
+              }
+            </style>
+        
+        
+        <style id="css-output">
+          
+        </style>
+        <script>
+          const consoleProxy = new Proxy(console, {
+            get(target, prop) {
+              if (typeof target[prop] === "function") {
+                return (...args) => {
+                  try {
+                    window.parent.postMessage(
+                      { typ: "console", prop, args },
+                      "*"
+                    );
+                  } catch {
+                    try {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop,
+                          args: args.map((x) => {
+                            try {
+                              window.structuredClone(x);
+                              return x;
+                            } catch {
+                              return { _MDNPlaySerializedObject: x.toString() };
+                            }
+                          }),
+                        },
+                        "*"
+                      );
+                    } catch {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop: "warn",
+                          args: [
+                            "[Playground] Unsupported console message (see browser console)",
+                          ],
+                        },
+                        "*"
+                      );
+                    }
+                  }
+                  target[prop](...args);
+                };
+              }
+              return target[prop];
+            },
+          });
+
+          window.console = consoleProxy;
+          window.addEventListener("error", (e) => console.log(e.error));
+        </script>
+        
+        
+      </head>
+      <body>
+        <ins>This text has been inserted</ins>
+
+        <script type="">
+          ;
+        </script>
+        <script>
+          try {
+            window.parent.postMessage({ typ: "ready" }, "*");
+          } catch (e) {
+            console.error("[Playground] Failed to post ready message", e);
+          }
+        </script>
+      
+    
+  </body></html>

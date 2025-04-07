@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0538)https://ecbb0b8f9e684078b38d8e6d601d4b57aec602fc.mdnplay.dev/en-US/docs/Web/HTML/Element/header/runner.html?state=TZHPSsNAEMZfZZiLl6TbloIQtrlIQUSx0EovuWyzY3dlMwm7U7WI4NP4YD6JxKTq7Zs%2FzO%2BbmTesU8ICMUMnTcACtYni60BlxQDakbEUf3QfzcutI1gHwySwMlGcVm5%2BLnejAFi3SchCy7Ajy5SsOWWgxTcE1gj1YlnhfDq7zGfTfLqosFzAfS3tniL0aa36nhL2p%2FPIG8MEm8aLG2lqwGn1z%2BOvhR1B8M%2FUOzDQDX7FGblIsA9HAsMWDpGIM3jx4iC10Bg%2BgTjPhwRJfAhw5ETEk4HSnQHagIv0uKzQiXSpUIpeTdMFmtRto8RRPvBy6u%2BjKiyvWhbPR4JIxno%2BfH18amXKYaZWfwfHDJ%2FGb6RYY4GKOH%2FYKNvWSe1or663d7dqFaghlnFvhe%2Ff -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+              /* Legacy css to support existing live samples */
+              body {
+                padding: 0;
+                margin: 0;
+              }
+
+              svg:not(:root) {
+                display: block;
+              }
+
+              .playable-code {
+                background-color: #f4f7f8;
+                border: none;
+                border-left: 6px solid #558abb;
+                border-width: medium medium medium 6px;
+                color: #4d4e53;
+                height: 100px;
+                width: 90%;
+                padding: 10px 10px 0;
+              }
+
+              .playable-canvas {
+                border: 1px solid #4d4e53;
+                border-radius: 2px;
+              }
+
+              .playable-buttons {
+                text-align: right;
+                width: 90%;
+                padding: 5px 10px 5px 26px;
+              }
+            </style>
+        
+        
+        <style id="css-output">
+          
+        </style>
+        <script>
+          const consoleProxy = new Proxy(console, {
+            get(target, prop) {
+              if (typeof target[prop] === "function") {
+                return (...args) => {
+                  try {
+                    window.parent.postMessage(
+                      { typ: "console", prop, args },
+                      "*"
+                    );
+                  } catch {
+                    try {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop,
+                          args: args.map((x) => {
+                            try {
+                              window.structuredClone(x);
+                              return x;
+                            } catch {
+                              return { _MDNPlaySerializedObject: x.toString() };
+                            }
+                          }),
+                        },
+                        "*"
+                      );
+                    } catch {
+                      window.parent.postMessage(
+                        {
+                          typ: "console",
+                          prop: "warn",
+                          args: [
+                            "[Playground] Unsupported console message (see browser console)",
+                          ],
+                        },
+                        "*"
+                      );
+                    }
+                  }
+                  target[prop](...args);
+                };
+              }
+              return target[prop];
+            },
+          });
+
+          window.console = consoleProxy;
+          window.addEventListener("error", (e) => console.log(e.error));
+        </script>
+        
+        
+      </head>
+      <body>
+        <article>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>
+      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
+      Jane Smith
+    </p>
+  </header>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
+</article>
+
+        <script type="">
+          ;
+        </script>
+        <script>
+          try {
+            window.parent.postMessage({ typ: "ready" }, "*");
+          } catch (e) {
+            console.error("[Playground] Failed to post ready message", e);
+          }
+        </script>
+      
+    
+  </body></html>

@@ -1,0 +1,10 @@
+				@font-face {
+					font-family: 'pf-centro-serif-p';
+					src: url('/wp-content/uploads/useanyfont/3858PF-Centro-Serif-P.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3858PF-Centro-Serif-P.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.pf-centro-serif-p{font-family: 'pf-centro-serif-p' !important;}
+
+		

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://byui-cse.github.io/wdd130-ww-course/week03/prepare-css-class-id.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | CSS Class and ID Attributes</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 130 _ CSS Class and ID Attributes_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Class and ID Attributes_files/course.css">
+  <link rel="stylesheet" href="./WDD 130 _ CSS Class and ID Attributes_files/vs2015.min.css">
+  <script src="./WDD 130 _ CSS Class and ID Attributes_files/692a19d31f48cd0e_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 130<span id="coursetitle">: Web Fundamentals</span></h1>
+      <img src="./WDD 130 _ CSS Class and ID Attributes_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd130-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W03 Learning Activities: CSS Selectors – Type, Universal, Class, ID</h2>
+    <h3>Overview</h3>
+    <p>CSS selectors allow us to target specific elements on the page to apply a CSS rule which rule is a collection of
+      CSS declarations.
+    </p>
+    <div class="callout info">
+      <p>
+        "A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the
+        browser which HTML elements should be selected to have
+        the CSS property values inside the rule applied to them. The element or elements which are selected by the
+        selector are referred to as the subject of the selector." – MDN
+      </p>
+    </div>
+
+    <h3>Prepare</h3>
+    <ul>
+
+      <li>A CSS rule's selector is the first part of the rule that tells the browser which HTML elements should have the
+        CSS property values applied. The elements selected by the selector are referred to as the subject of the
+        selector.
+        <h4>CSS Selector Types</h4>
+        <table>
+          <tbody><tr>
+            <th>Selector Type</th>
+            <th>Example</th>
+            <th>CSS Rule Application</th>
+          </tr>
+          <tr>
+            <td>Universal</td>
+            <td><code>* { ... }</code></td>
+            <td>Applies to all elements</td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td><code>h1 { ... }</code></td>
+            <td>Applies to all <code>&lt;h1&gt;</code> elements</td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td><code>.red { ... }</code></td>
+            <td>Applies to all elements with the "red" class value</td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td><code>#red { ... }</code></td>
+            <td>Applies to the one element with the "red" id value</td>
+          </tr>
+        </tbody></table>
+      </li>
+      <li>A <strong>class</strong> attribute can be applied to many elements on a document. More
+        than one class can be applied to a single element. The class can be selected by using period (.) notation.
+        <h4>HTML class attribute and CSS class selector examples</h4>
+        <table>
+          <tbody><tr>
+            <th>HTML</th>
+            <th>CSS</th>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;div class="callout highlight active"&gt;</code><br>
+              <code>&lt;span class="highlight"&gt;</code>
+            </td>
+            <td><code>.highlight {<em>declarations</em>}</code><br>
+              <code>.callout {<em>declarations</em>}</code><br>
+              <code>.active {<em>declarations</em>}</code><br>
+            </td>
+          </tr>
+        </tbody></table>
+      </li>
+      <li>A <strong>id</strong> attribute can only be applied to one element per document and each element may only have
+        one id. The id can be selected by <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id" target="_blank">CSS id
+          selector</a> using hash (#) notation.
+        <h4>HTML id attribute and CSS id selector example</h4>
+        <table>
+          <tbody><tr>
+            <th>HTML</th>
+            <th>CSS</th>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;nav id="sub-menu"&gt;</code>
+            </td>
+            <td><code>#sub-menu {<em>declarations</em>}</code><br>
+
+            </td>
+          </tr>
+        </tbody></table>
+      </li>
+    </ul>
+
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>Navigate to this CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/jOgXeyE" target="_blank">Class and ID
+          Attributes</a>
+      </li>
+      <li>In the HTML panel, remove the <code>note</code> class from the second paragraph <code>&lt;p&gt;</code> leaving
+        only one class for that paragraph named <code>editorial</code>. What happens? Use the CSS panel to help answer
+        the question.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>
+          </p><pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"editorial"</span>&gt;</span></code></pre>
+          That second paragraph is no longer styled with the "note" class and therefore loses the italicized font
+          style, bold font weight, and color.
+          <p></p>
+        </details>
+      </li>
+      <li>In the HTML panel, add an <code>id</code> attribute to the fourth (last) paragraph <code>&lt;p&gt;</code> and
+        name it <code>highlight</code>.</li>
+      <li>In the CSS panel, write a CSS rule for the <code>highlight</code> id selector with CSS declarations that
+        <ol>
+          <li>underlines the text</li>
+          <li>applies a yellowish background color</li>
+          <li>adds some whitespace around the text (padding)</li>
+        </ol>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>
+          </p><h4>HTML Alterations</h4>
+          <pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"highlight"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+          <h4>CSS Alterations</h4>
+          <pre><code class="css hljs language-css"><span class="hljs-selector-id">#highlight</span> {
+    <span class="hljs-attribute">text-decoration</span>: underline;
+    <span class="hljs-attribute">background-color</span>: lightyellow;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+  }</code></pre>
+          <figure>
+            <img src="./WDD 130 _ CSS Class and ID Attributes_files/selectors-sol.png" alt="Class and ID Attributes with changes" loading="lazy" width="500">
+            <figcaption>Class and ID Attributes with changes</figcaption>
+          </figure>
+          <p></p>
+        </details>
+      </li>
+    </ol>
+
+
+    <div class="callout reference">
+      <h4>Optional Resources</h4>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">CSS
+            Selectors</a> – MDN</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors" target="_blank">Type, Class, and ID Selectors</a> – MDN</li>
+
+      </ul>
+    </div>
+
+
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 130 _ CSS Class and ID Attributes_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="./WDD 130 _ CSS Class and ID Attributes_files/prevent-code-select.js.download"></script>
+
+
+</body></html>

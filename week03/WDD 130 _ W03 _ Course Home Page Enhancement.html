@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://byui-cse.github.io/wdd130-ww-course/week03/ponder-home-enhancement.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | W03 | Course Home Page Enhancement</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./WDD 130 _ W03 _ Course Home Page Enhancement_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./WDD 130 _ W03 _ Course Home Page Enhancement_files/course.css">
+  <link rel="stylesheet" href="./WDD 130 _ W03 _ Course Home Page Enhancement_files/vs2015.min.css">
+  <script src="./WDD 130 _ W03 _ Course Home Page Enhancement_files/692a19d31f48cd0e_complete.js.download" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 130<span id="coursetitle">: Web Fundamentals</span></h1>
+      <img src="./WDD 130 _ W03 _ Course Home Page Enhancement_files/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week01/">W1</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd130-ww-course/week03/">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week04/">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week05/">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week06/">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd130-ww-course/week07/">W7</a></span>
+    </nav>
+
+    <h2>W03 Optional Practice: Home Page Layout Enhancements</h2>
+    <h3>Overview</h3>
+    <p>This practice activity has you apply the concepts from the learning activities
+      to enhance your home page with HTML references, using the CSS box model, CSS selectors, and
+      layout.</p>
+
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>Open your home page, <strong>index.html</strong> for editing.</li>
+      <li>Add an <strong>HTML comment</strong> at the bottom of the document, after the closing
+        <code>&lt;/body&gt;</code> tag, that contains the date that you have last modified the page.
+      </li>
+      <li>Add an unordered list <code>&lt;ul&gt;</code> to your home page.
+        <ul class="check">
+          <li>The list should be located in the <code>main</code> element at the end (before the
+            closing <code>&lt;/main&gt;</code> tag).</li>
+          <li>Your list must have at least three (3) list items, listing your favorite temples.</li>
+          <li>The listed temples must be text links to a temple detail page using the <a href="https://www.churchofjesuschrist.org/temples/list" target="_blank" rel="noopener">Temple
+              List</a> at churchofjesuschrist.org or <a href="https://newsroom.churchofjesuschrist.org/temples-list" target="_blank" rel="noopener">Newsroom Temples List</a> or unofficially the <a href="https://churchofjesuschristtemples.org/temples/" target="_blank" rel="noopener">Temples of the
+              Church of Jesus Christ of Latter-day Saints ORG</a> </li>
+          <li>These links must open up a new browser tab when selected.</li>
+        </ul>
+        <div class="callout info">
+          <p>
+            <strong>Hints</strong><br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank" rel="noopener">The
+              Unordered List element</a> – MDN<br>
+            <a href="https://www.w3schools.com/tags/att_a_target.asp" target="_blank" rel="noopener">HTML &lt;a&gt;
+              Attribute</a> – w3schools<br>
+          </p>
+        </div>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.churchofjesuschrist.org/temples/details/philadelphia-pennsylvania-temple"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Philadelphia Pennsylvania Temple<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.churchofjesuschrist.org/temples/details/paris-france-temple"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Paris France Temple<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.churchofjesuschrist.org/temples/details/lima-peru-los-olivos-temple"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span>&gt;</span>Berlin Germany Temple<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+        </details>
+      </li>
+      <li>Open your <strong>styles.css</strong> page for editing.</li>
+
+      <li>At the top of the document, create a CSS rule for the universal selector (wildcard) that
+        contains three declarations:
+        <ul class="check">
+          <li>Set the <code>margin</code> shorthand property to 0.</li>
+          <li>Set the <code>padding</code> shorthand property to 0.</li>
+          <li>Set the <code>box-sizing</code> property to border-box.</li>
+        </ul>
+        <div class="callout info">
+          <p>
+            Setting the universal selector to have a margin and padding of zero (0) will ensure that
+            all elements on the page will have no margin or padding, regardless of the browser
+            defaults. This will make it easier for you to control the page layout.
+          </p>
+        </div>
+        <div class="callout info">
+          <p>
+            When the <code>border-sizing</code> property is set to the
+            non-default value of <code>border-box</code>, this tells the browser to account for any
+            border and padding in the values you specify for an element's width and height. – <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Box-sizing</a> – MDN
+          </p>
+        </div>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre>      <code class="css hljs language-css">* {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}</code></pre>
+        </details>
+      </li>
+      <li>Add a CSS comment at the bottom of your stylesheet that creates a comment header for a
+        section called "Class Selectors". You will be putting your class selector rules below this comment.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="css hljs language-css"><span class="hljs-comment">/* Class Selectors */</span></code></pre>
+        </details>
+      </li>
+      <li>Add a class selector to your CSS after the comment. Name it "<strong>box</strong>".
+        <ul class="check">
+          <li>Style the <strong>box</strong> class with basic box model properties for margin,
+            border, padding.</li>
+          <li>Set the value of the margin and padding to equal 1rem which means, match the root font
+            size.</li>
+          <li>Also add decorations of background-color and color of your own design.</li>
+          <li>Remove any duplication of these properties from the <strong>aside</strong> CSS rule.
+          </li>
+        </ul>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="css hljs language-css"><span class="hljs-selector-class">.box</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">rgb</span>(<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> / <span class="hljs-number">10%</span>);
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ddd</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+}</code></pre>
+          Adjusted <code>aside</code> rule example. (Your aside may have other properties. This is
+          just an example.)
+          <pre><code class="css hljs language-css"><span class="hljs-selector-tag">aside</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">20em</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+}</code></pre>
+          <div class="callout warning">Did you miss the period (.) in your syntax when defining
+            the <strong>box</strong> class?</div>
+        </details>
+      </li>
+      <li>In your HTML, give the <code>aside</code> element a class of <strong>box</strong>.
+        <details>
+          <summary>Check Your Understanding</summary>
+
+          <pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span></code></pre>
+        </details>
+      </li>
+      <li>In your HTML, given the <code>ul</code> element list of temples a class of
+        <strong>box</strong>.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span></code></pre>
+        </details>
+        <div class="callout info">Are you observing and noting the changes by running Live/Five Server
+          (localhost) while you make changes and build your page?</div>
+      </li>
+      <li>
+        Use CSS to float your profile image to the right. The paragraph should come right after the
+        picture. If your introduction is too short, you may need to add more content to ensure that the layout looks
+        appropriate.
+        <figure>
+          <img src="./WDD 130 _ W03 _ Course Home Page Enhancement_files/float-profile-image.png" alt="Floated profile image example" loading="lazy" width="360">
+          <figcaption>Float Profile Image Example</figcaption>
+        </figure>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre>      <code class="css hljs language-css"><span class="hljs-selector-tag">main</span> <span class="hljs-selector-tag">img</span> {
+  <span class="hljs-comment">/* you most likely will have other declarations here */</span>
+  <span class="hljs-attribute">float</span>: right;
+}</code></pre>
+        </details>
+      </li>
+      <li>
+        <figure class="floatright">
+          <img src="./WDD 130 _ W03 _ Course Home Page Enhancement_files/heading-absolute.png" alt="Screenshot of heading overlay" width="180">
+          <figcaption>Heading Overlay Example</figcaption>
+        </figure>
+        Using CSS absolute positioning, overlay the the state/country heading element on the image within the
+        <code>aside</code> element.
+        <div class="callout info">This means that you will need to set the container,
+          <code>aside</code>, to have a <code>position: relative;</code> declaration.
+        </div>
+        <details>
+          <summary>Check Your Understanding</summary>
+          These numbers for top and left may not work for your image. This is just an example.
+          <pre><code class="css hljs language-css"><span class="hljs-selector-tag">aside</span> <span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">47px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">150px</span>;
+}</code></pre>
+        </details>
+      </li>
+      <li>In your HTML <code>nav</code> navigation bar, add two (2) more <code>&lt;a&gt;</code>
+        links:
+        <ul class="check">
+          <li>an external link to your LinkedIn profile if you have one. If you do not have one, link to
+            <code>https://linkedin.com</code>.
+          </li>
+          <li>an external link to your Facebook page you have one. If you do not have one or would prefer not to share
+            it, link to <code>https://facebook.com</code>.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h4>Help</h4>
+    <div class="callout info">
+      <p>Video Demonstration: ▶️ <a href="https://video.byui.edu/media/t/1_74i84joo" target="_blank" rel="noopener">Enhancing the Course Home Page</a> <span class="smaller">[ 18:45 minutes ]</span></p>
+    </div>
+
+    <h4>Testing</h4>
+    <ol>
+      <li>Be sure to <strong>continuously save and test</strong> your page locally using the <strong>Live
+          Server</strong> extension in VS Code.</li>
+      <li>Review your work using the course's <a href="https://byui-cse.github.io/wdd130-ww-course/dev-standards.html">development standards checklist</a>.</li>
+      <li><strong>Commit and sync</strong> your page to your remote GitHub Pages enabled wdd130 repository.</li>
+      <li>Enter your GitHub username into this ✔ <a href="https://byui-cse.github.io/wdd130-ww-course/grader/w03-homepage.html" target="_blank">page
+          evaluation
+          tool</a> to self evaluate some of the basic structure and components of your work.</li>
+    </ol>
+
+
+
+    <!-- <h3>Submission</h3>
+    <ol>
+      <li>Commit and push your changes to your wdd130 GitHub Pages enabled repository.</li>
+      <li>Return to Canvas to submit your wdd130 GitHub Pages URL:
+        <pre><code class="cli">https://<em>githubusername</em>.github.io/wdd130</code></pre>
+      </li>
+    </ol> -->
+
+
+
+  </main>
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="./WDD 130 _ W03 _ Course Home Page Enhancement_files/highlight.min.js.download"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="./WDD 130 _ W03 _ Course Home Page Enhancement_files/prevent-code-select.js.download"></script>
+
+
+</body></html>
