@@ -1,0 +1,40 @@
+/* Main styles */
+main {
+    max-width: 840px;
+  }
+  
+  /* Aside styles */
+  aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2); /* Light, subtle border */
+    padding: 1rem;
+    background-color: #eee; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+    text-align: center;
+  }
+  
+  /* Image inside aside - Ensure aspect ratio is maintained */
+  aside img {
+    width: 200px;
+    height: auto; /* Ensures the image's aspect ratio is maintained */
+  }
+  
+  /* Profile image inside main */
+  main img {
+    width: 150px;
+    height: auto; /* Keeps the image aspect ratio intact */
+  }
+  
+  /* Paragraph padding reset */
+  p {
+    padding: 0; /* Removes padding around paragraphs */
+  }
+  
+  /* Footer styles */
+  footer {
+    margin-top: 15px; /* Adds space between footer and main content */
+    border-top: 1px solid #000; /* Adds a subtle border at the top */
+    text-align: center; /* Centers the footer text */
+  }
+  
