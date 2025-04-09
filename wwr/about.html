@@ -9,13 +9,7 @@
     <title>About Us - Rafting Adventure</title>
 
     <!-- Google Fonts for Heading and Text -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="styles/rafting.css">
@@ -25,12 +19,17 @@
 
     <!-- HEADER -->
     <header>
-        <img src="images/logo.png" alt="Rafting Adventure Logo" class="logo">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Rafting Adventure Logo" class="logo">
+        </div>
+        <h1>Rafting Adventure</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -39,7 +38,7 @@
         <!-- Hero Section -->
         <div class="hero">
             <img src="images/rafting10_1024.jpg" alt="White Water Rafting Adventure">
-            <h1>Rafting Adventure</h1>
+            <h2>Rafting Adventure</h2>
             <article>
                 <img src="images/happy-client.jpg" alt="Happy Client">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae risus sit amet tortor feugiat facilisis.</p>
@@ -47,19 +46,36 @@
         </div>
 
         <!-- History Section -->
-        <section>
-            <h2>History</h2>
-            <p>Founded in 1990, Rafting Adventure has provided unforgettable white-water rafting experiences to thousands of clients worldwide. Our guides are passionate and skilled, offering safe and exhilarating adventures.</p>
+        <section class="history">
+            <h2>Our History</h2>
+            <p>Founded in 1990, Rafting Adventure has provided unforgettable white-water rafting experiences to thousands of clients worldwide. Our guides are passionate and skilled, offering safe and exhilarating adventures. We specialize in trips that provide excitement and safety in equal measure.</p>
         </section>
 
         <!-- Adventure Awaits You Section -->
-        <section>
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
-            <img src="images/rafting1.jpg" alt="Rafting Image 1">
-            <img src="images/rafting2.jpg" alt="Rafting Image 2">
-            <img src="images/rafting3.jpg" alt="Rafting Image 3">
-            <img src="images/rafting4.jpg" alt="Rafting Image 4">
-            <img src="images/rafting5.jpg" alt="Rafting Image 5">
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/rafting1.jpg" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting2.jpg" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting4.jpg" alt="Class V Rapids">
+                    <figcaption>Class V Rapids</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting5.jpg" alt="Wild Water Rapids">
+                    <figcaption>Wild Water Rapids</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
