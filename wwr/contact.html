@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rafting Adventure for any inquiries or booking requests.">
+    <meta name="author" content="Simon Thuo Ndirangu">
+    <title>Contact Us - Rafting Adventure</title>
+
+    <!-- Google Fonts for Heading and Text -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Rafting Adventure Logo" class="logo">
+        </div>
+        <h1>Rafting Adventure</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- Contact Us Section -->
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to us for any inquiries or booking requests.</p>
+
+            <div class="company-info">
+                <div class="address">
+                    <h3>Our Address</h3>
+                    <p>Off Iten road, Sirikwa next to Police line Eldoret</p>
+                </div>
+                <div class="phone-email">
+                    <h3>Contact Us</h3>
+                    <p>Phone: +254 738 269 900</p>
+                    <p>Email: <a href="mailto:info@raftingadventure.com">info@raftingadventure.com</a></p>
+                </div>
+                <div class="google-map">
+                    <!-- Embed Google Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section class="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="profiles">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Employee 1">
+                    <figcaption>Francis Atwoli - Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Employee 2">
+                    <figcaption>Jane Wairimu and Mary Njoki- Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Employee 3">
+                    <figcaption>Martha Koech - Booking Coordinator</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="purpose">Purpose of Message:</label>
+                <label><input type="radio" name="purpose" value="General Inquiry"> General Inquiry</label>
+                <label><input type="radio" name="purpose" value="Reservation Question"> Reservation Question</label>
+                <label><input type="radio" name="purpose" value="Website Suggestion"> Website Suggestion</label>
+
+                <label><input type="checkbox" name="newsletter" value="subscribe"> Subscribe to monthly newsletter</label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Rafting Adventure. All rights reserved. Designed by Simon Thuo Ndirangu.</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com/ndirangu.simon.2025">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </nav>
+        <p><a href="contact-wireframe-link">View Wireframe Design</a></p> <!-- Link to wireframe -->
+    </footer>
+
+</body>
+
+</html>
