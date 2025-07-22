@@ -130,7 +130,7 @@ nav a {
   grid-area: image;
   width: 100%;
   max-width: 2000px;
-  max-height: auto;
+  height: auto;
   display: block;
   align-self: center;
   margin: 0 auto;
